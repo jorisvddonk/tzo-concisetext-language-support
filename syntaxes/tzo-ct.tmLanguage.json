@@ -1,0 +1,82 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "tzo",
+	"patterns": [
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.tzo-ct",
+					"match": "\\b(jgz|jz|pause|exit|goto)\\b"
+				},
+				{
+					"name": "keyword.control.tzo-ct",
+					"match": "(\\{|\\})"
+				},
+				{
+					"name": "keyword.tzo-ct",
+					"match": "\\b(nop|pop|concat|rconcat|randInt|charCode|ppc|dup|getContext|hasContext|setContext|delContext|stacksize|stdout)\\b"
+				},
+				{
+					"name": "keyword.operator.arithmetic.tzo-ct",
+					"match": "(plus|min|mul|\\+|\\-|\\*)"
+				},
+				{
+					"name": "keyword.operator.comparison.tzo-ct",
+					"match": "\\b(gt|lt|eq)\\b"
+				},
+				{
+					"name": "keyword.operator.logical.tzo-ct",
+					"match": "\\b(not|or|and)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.tzo-ct",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.tzo-ct",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.tzo-ct",
+					"begin": "\\/\\/",
+					"end": "\n|\r"
+				},
+				{
+					"name": "comment.block.tzo-ct",
+					"begin": "\\/\\*",
+					"end": "\\*\\/"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "-?[0-9]+\\.?[0-9]*"
+				}
+			]
+		}
+	},
+	"scopeName": "source.tzo-ct"
+}

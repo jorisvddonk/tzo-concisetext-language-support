@@ -1,0 +1,34 @@
+{
+    "name": "tzo-concisetext-language-support",
+    "displayName": "tzo-concisetext-language-support",
+    "description": "Provides language support for Tzo ConciseText",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "tzo-ct",
+                "aliases": [
+                    "tzo-ct",
+                    "tzo-ct"
+                ],
+                "extensions": [
+                    ".tzo"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "tzo-ct",
+                "scopeName": "source.tzo-ct",
+                "path": "./syntaxes/tzo-ct.tmLanguage.json"
+            }
+        ]
+    }
+}
