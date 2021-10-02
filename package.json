@@ -3,6 +3,11 @@
     "displayName": "tzo-concisetext-language-support",
     "description": "Provides language support for Tzo ConciseText",
     "version": "0.0.1",
+    "publisher": "jorisvddonk",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jorisvddonk/tzo-concisetext-language-support"
+    },
     "engines": {
         "vscode": "^1.60.0"
     },
